@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STRING METHODS</title>
+    <script>
+      // STRING METHODS............
+
+      let str = "hello how are you, good morning friends!";
+      
+      console.log(str);
+      console.log(str.length);
+      console.log(str.length-1);
+      console.log(str.charAt());
+      console.log(str.charAt(20));
+      console.log(str.indexOf("o",16));
+      console.log(str.lastIndexOf("o",24));
+
+      
+
+      let h='vicky Vignesh';
+      let w= 'punithavalli';
+      // console.log(h.charAt()+w.charAt());
+
+
+
+      // ;
+      // LENGTH
+      //     console.log(str.length); // 40
+      //     console.log(str.length-1); // get last value
+
+      //    // CHAR AT
+      //   console.log(str.charAt());  // h --> 0 th position
+      //   console.log(str.charAt(1));    //e
+      //   console.log(str.charAt(10));    //a
+      //   console.log(str.charAt(9));    //''
+      //   console.log(str.charAt(str.length-1));    //!
+
+      //   let h='vicky Vignesh';
+      //   let w= 'punithavalli'
+      //   console.log(h.charAt()+w.charAt(0));
+
+      //////////////////////////////////////
+
+      /* // INDEXOF
+             let str="hello how are you, good morning friends!"
+               ;
+
+             console.log(str.indexOf());  //-1 no value
+             console.log(str.indexOf('g'));  // index = 19, length = 20
+             console.log(str.indexOf('good'));  // index = 19, length = 20
+             console.log(str.indexOf('o'));  // 4
+             console.log(str.indexOf('O'));  // -1 no value
+             console.log(str.indexOf('o',15));  // 15 'o'
+             console.log(str.indexOf('o',16));  // 16 ku apprm 'o'--> 20th place  la irruku
+
+             let u='yuvaraj';
+             let value='a'   // input vara value mathiris
+           //   value ='a'  //  'a' yuvaraj la irruku appo condition false
+           //   value ='h'  //  'h' yuvaraj la illa condition true
+             if(u.indexOf(value)==-1){
+               console.log("No value 'h' in the Name");
+
+             }
+             else{
+               console.log('Congrats its available');
+
+             }
+
+
+            //////////////////////////////////
+
+            // LASTINDEX OF
+
+            let str="hello how are you, good morning friends! good";
+
+            console.log(str.lastIndexOf());  //-1
+            console.log(str.lastIndexOf('i'));  // 34
+            console.log(str.lastIndexOf('o'));  // 25
+            console.log(str.lastIndexOf('o',24));  // 21 (24 ku munndadi irrukura 'o' reversela check pannum);
+            console.log(str.lastIndexOf('k'));  //-1 not value
+            console.log(str.lastIndexOf('doog'));  //-1 not value
+            console.log(str.lastIndexOf('good'));  //41 not value
+            console.log(str.lastIndexOf('good',40));  // 19
+
+            ////////////////////////////////////
+             */
+      //
+      //UPPERCASE AND LOWERCASE
+
+      // let a='VigNesHKuMar';
+      // let b='PUNIDHAVELLI'
+      // console.log(a.toUpperCase()); //VIGNESHKUMAR
+      // console.log(a.toLowerCase()); //vigneshkumar
+      // console.log(b.toLowerCase());   //punidhavelli
+
+      /////////////////////
+
+      // TRIM
+
+      // start and last la irrukura empty space remove panniduva
+      // center la irrukura empty space remove panna maattan
+
+      // let username='      ajithkumar       ';
+      // let g='      ajith    kumar       ';
+      // console.log(username.length);  //23
+      // console.log(username); //       ajithkumar
+      // console.log(username.trim()); //ajithkumar
+      // console.log(g.trim()); //ajith    kumar
+
+      /////////////////////////////
+
+      // STRING LA BOOLEANS
+      // 1) INCLUDES
+      // 2) STARTSWITH
+      // 3) ENDSWITH
+
+      // INCLUDES
+
+      // let x ='Vicky Vignesh';
+      // let str='vicky pachakilli vikram suriya ajith vijay'
+
+      // console.log(x.includes()); //false
+      // console.log(x.includes('n')); //true
+      // console.log(x.includes(' ')); //true
+      // console.log(x.includes('z')); //false
+      // console.log(x.includes('I')); //false
+      // console.log(x.toUpperCase().includes('I')); //true
+
+      // if(str.includes('vickys')){
+      //     console.log('username available');
+
+      // }
+      // else{
+      //     console.log('not match');
+
+      // }
+
+      /////////////////////////////
+
+      // STARTSWITH
+
+      // return true or false
+      // default index 0 la start pannuvan
+      // argument kudutha kudukura eadathula irrunthu start pannuvan
+      // let str='vicky pachakilli vikram suriya ajith vijay'
+      //     console.log(str.startsWith('vicky'));  // true
+      //     console.log(str.startsWith('v'));  // true
+      //     console.log(str.startsWith('p'));  // false
+      //     console.log(str.startsWith('p',6));  // true (6,enga irrunthu start panrathunu sollanum);
+      //     console.log(str.startsWith('pacha'));  // true (6,enga irrunthu start panrathunu sollanum);
+
+      ////////////////////////
+
+      /// ENDSWITH
+
+      // let str='vicky pachakilli vikram suriya ajith vijay'
+      // console.log(str.endsWith('y')); //true
+      // console.log(str.endsWith('vijay')); //true
+      // console.log(str.endsWith('ajith',36)); // true
+      // console.log(str.endsWith('ajith',str.indexOf('vijay')-1)); // true
+
+      // let email='abcd@gmail.com'
+      // if (email.endsWith('gmail.com')) {
+      //     console.log('its email');
+
+      // }
+      // if(email.includes('@')){
+      //     console.log('its email');
+
+      // }
+
+      //////////////////////////
+
+      //  REPEAT
+
+      // let msg='hallo';
+      // console.log(msg.repeat(10)); // hallohallohallohallohallohallohallohallohallohallo
+
+      ////////////////////////////
+
+      // REPLACE
+
+      // let x = "vigky vignkeh";
+      // let str = "hallo how are you are friends ARe ";
+      // console.log(x.lastIndexOf("e"));
+
+      // let y = x.replace("g", "c"); // g -> c ==> vicky vigneeh
+      // console.log(y);
+      // console.log(str.replace("are", "is")); //hallo how is you are friends Are
+      // console.log(str.replace(/are/, "is")); //hallo how is you are friends Are
+      // console.log(str.replace(/are/g, "is")); //hallo how is you is friends Are
+
+      // console.log(str.replace(/are/gi, "is")); //hallo how is you is friends is
+
+      // let i = 1;
+      // console.log(--i + i++);   //0
+      // console.log(i++);         // 1
+
+      ////// SLICE
+      // last val increase panni slice pannanum;
+      // let str = "Hello World";
+      // console.log(str.slice(0, -1));
+      // let str1='My name is ajith'
+
+      // console.log(str.slice()); // Hello World
+      // console.log(str.slice(0)); // Hello World
+      // console.log(str.slice(1)); // ello World
+      // console.log(str.slice(0, 4)); // Hell
+      // console.log(str.slice(0, 5)); // Hello
+      // console.log(str.slice(-1)); // d
+      // console.log(str.slice(-2)); // ld
+      // console.log(str.slice(1, -2)); // ello Wor
+      // console.log(str.slice(-4, -1)); // orl
+
+      /////////////////////
+
+      //PADSTART
+      // let num = "1";
+      // console.log(num.padStart(5, "-") + "  number"); // ----1
+      // console.log(num.padStart(2, "0") + "  number"); // 01
+
+      // console.log("20130".padStart(10, "0")); //////0000020130
+      // console.log("338413100".padStart(10, "0")); //0338413100
+      // console.log("4111040".padStart(10, "0")); ////0004111040
+      // console.log("1000".padStart(10, "0")); ///////0000001000
+      // console.log("1010740".padStart(10, "0"));/////0010107400
+      // */
+      //////////////////////
+      // PADEND
+
+      // console.log("1234".padEnd("10", "-")); ////1234------
+      // console.log("12".padEnd("10", "-")); //12--------
+      // console.log("123469969".padEnd("10", "-"));
+      // console.log("1234969".padEnd("10", "-"));
+
+      // console.log("12345".padStart("7", "+").padEnd("9", "-")); // ++12345--
+      // es-
+      // function result() {
+      //   let username = document.getElementById("doName");
+      //   let str = "@gmail.com";
+
+      //   console.log(username.value.endsWith(str));
+
+      //   if (username.value.endsWith(str) && username.value.length >= 13) {
+      //     alert("email");
+      //   } else {
+      //     alert("not email");
+      //   }
+      // }
+
+    </script>
+  </head>
+  <body>
+    <!-- es-1 <p id="arr">vicky,uraj,ajith,suresh,siva,babu</p>
+    <input type="text" id="doName" />
+    <button onclick="result()"></button>es-1 -->
+
+    <input type="text" id="doName" />
+    <button onclick="result()">ok</button>
+  </body>
+</html>

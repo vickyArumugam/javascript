@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //ARRAY METHODS
+
+      // CONCAT
+      /*
+                             let a = [1, 2, 3];
+                             let b = [4, 5, 6];
+                             let x = ["arun", "bala"];
+                             let c = a.concat(b); //  [1, 2, 3, 4, 5, 6]
+                             console.log(a.concat(b)); //[1, 2, 3, 4, 5, 6]
+                             console.log(c.concat(x)); //[1, 2, 3, 4, 5, 6, 'arun', 'bala'];
+
+                             // PUSH
+
+                             let arr = ["arun", "bala", "charan"];
+                             arr.push("kumar");
+                             console.log(arr); //['arun', 'bala', 'charan', 'kumar']
+                             arr.push("kumar");
+                             console.log(arr); // ['arun', 'bala', 'charan', 'kumar', 'kumar'];
+
+                             // POP
+                             let arr = ["arun", "bala", "charan"];
+                             arr.pop();
+                             console.log(arr);  //['arun', 'bala']
+                             arr.pop();
+                             console.log(arr);  //['arun']
+                             arr.pop();
+                             console.log(arr);  //[]
+                             arr.push("ajith"); //['ajith']
+                             arr.push("arun");
+                             console.log(arr);  //['ajith'.'arun']
+
+
+                             // UNSHIFT
+
+                             let arr = ["arun", "bala", "charan"];
+
+                             arr.unshift("Ajith");
+                             console.log(arr); // ['Ajith', 'arun', 'bala', 'charan'];
+                             arr.unshift("thiru");
+                             console.log(arr); //  ['thiru','Ajith', 'arun', 'bala', 'charan'];
+
+                       // SHIFT
+                       let arr = ["Ajith", "arun", "bala", "charan"];
+                       arr.shift(); //
+                       console.log(arr); //['arun', 'bala', 'charan']
+
+                       //practice
+                       arr.push("vicky");
+                       arr.push("vijay"); //['arun', 'bala', 'charan','vicky','vijay']
+                       arr.pop();
+                       arr.shift();  ////[ 'bala', 'charan','vicky']
+                       arr.unshift("ajith");
+                       arr.push("ajith"); ////['ajith', 'bala', 'charan','vicky','ajith']
+                       arr.pop();
+                       arr.shift();
+                       console.log(arr); ////['bala', 'charan','vicky']
+
+
+                       //////////////////////////////////////////////////////
+                       //////////////////////////////////////////////////////
+
+
+                       // REVERSE METHOD
+
+                       let arr = [1, 2, 3, 4, 5, 6];
+                       arr.reverse();
+                       console.log(arr); // [6, 5, 4, 3, 2, 1]
+
+                       let arr1 = ["A", "B", "C", "D"];
+                       arr1.reverse();
+                       console.log(arr1); //['D', 'C', 'B', 'A']
+
+                       let arr2 = ["thiru", "Ajith", "arun", "bala", "charan", "abc"];
+                       arr2.reverse();
+                       console.log(arr2);  // ['abc', 'charan', 'bala', 'arun', 'Ajith', 'thiru'];
+
+
+
+                  // SPLIT
+
+                  // STRING TO ARRAY  =========>   SPLIT METHOD
+                  // "ARUN" => ['A','R','U','N'];
+                  // 12345  => String(12345)
+
+                  let a = 1234567890;
+
+                  console.log(String(a).split()); //['1234567890']
+
+                  console.log(String(a).split("")); //['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
+                  let str = "name:vicky,age:45,gender:Male,city:Kalambur";
+
+                  console.log(str.split(",")); //['name:vicky', 'age:45', 'gender:Male', 'city:Kalambur']
+
+                  console.log(str.split(":")); //['name', 'vicky,age', '45,gender', 'Male,city', 'Kalambur']
+
+
+                  // ARRAY TO STRING  ==========>  JOIN METHOD
+                  // ['A','R','U','N'] =>   "ARUN";
+
+                  let arr = [1, 2, 3, 4, 5, 6];
+                  console.log(arr.join()); // 1,2,3,4,5,6 type string
+                  console.log(arr.join("")); // 12345 type string
+
+                  let arr1 = ["Hello", "Good", "Morning"];
+                  console.log(arr1.join("")); // HelloGoodMorning
+                  console.log(arr1.join()); // Hello,Good,Morning
+                  console.log(arr1.join(" - ")); // Hello - Good - Morning
+
+                  //slice,splice,map,filter,foreach,sort,some,every,find,reduce,flat
+
+                  // let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+                  // console.log(str.split("").reverse().join("")); //ZYXWVUTSRQPONMLKJIHGFEDCBA
+
+                  ///SLICE
+                  let arr = ["thiru", "Ajith", "arun", "bala", "charan", "abc"];
+                  console.log(arr.slice(2, -1)); //['arun', 'bala', 'charan'];
+
+                  // SPLICE
+                  // 3arguments um kattayum podanum nu avasiyum illa
+                  // splice(starting(index)la sollanum, delete count(0 or 1,2,3..),new value type string "name")
+
+                  let arr = ["thiru", "Ajith", "arun", "bala", "charan", "abc"];
+
+                  // arr.splice(1, 1);//['thiru', 'arun', 'bala', 'charan', 'abc']
+                  // arr.splice(3, 1, "vicky"); //['thiru', 'Ajith', 'arun', 'vicky', 'charan', 'abc'];
+                  // arr.splice(1, 0, "vijay"); //['thiru', 'vijay', 'Ajith', 'arun', 'bala', 'charan', 'abc']
+                  // arr.splice(1, 2, "vijay", "vikram"); //['thiru', 'vijay', 'vikram', 'bala', 'charan', 'abc']
+
+                  // console.log(arr);
+
+                  //////////////////////////////////
+
+                  // FLAT
+                  // let a = [1, 2, [3, 4], [5, 6, [7, 8, [9, 10]]]];
+                  console.log(a.flat(3)); //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+            ///////////////////////////////////////////////////////
+            ////////////////////////////////////////
+            /////////////////////////////////
+            ////////////////////////
+
+                  // MAP METHOD
+
+                  // oru line code {} vendam
+                  // example
+                  // if (false) console.log("true");
+                  // else console.log("false");
+                  // {} kalli brackets use panna return key word use pannanum 
+
+                  let salary = [100, 200, 300, 400, 500];
+                  // let bonusSalary = salary.map((value) => {
+                  //   // console.log(value); //100,200,300,400,500
+                  //   // console.log(value * 2); //200,400,600,800,1000
+                  //   return value * 2;
+                  // });
+                  let bonusSalary = salary.map((value) => value * 2);
+                  console.log(salary);
+                  console.log(bonusSalary);
+
+                  ////////////////////////////////
+                  ///////////////////////////////
+
+                  // FILTER
+                  let salary = [100, 200, 300, 400, 500];
+                  let trainers = salary.map((value) => {
+                    return value <= 300;
+                    // console.log(value <= 300);// true or false
+                  });
+                  //console.log(trainers); true or false
+
+                  let lowSalary = salary.filter((value) => {
+                    return value <= 300;
+                    // console.log(value <= 300);
+                  });
+
+                  console.log(lowSalary);
+
+                  let total = [13, 19, 3, 7, 15, 20, 3, 21, 28, 46, 90];
+                  let votingList = total.filter((value) => {
+                    return value >= 18 && value <= 60;
+                  });
+                  console.log(votingList);
+
+
+            ////////////////////////////////////////
+
+            // FOR EACH
+            let arr = ["thiru", "Ajith", "arun", "bala", "charan", "Abc"];
+            // arr.forEach((value, i) => console.log(i + 1, value));
+
+            ///////////////////////////////////////
+           // SORT
+           // 1st preperance Capital[A-Z]
+            // arr.sort();
+          //  console.log(arr); //['Abc', 'Ajith', 'arun', 'bala', 'charan', 'thiru']
+
+          
+           let arr1=[10,20,500,-10,-100,250,1000,-7]
+          //  -5,-4,-3,-2,-1,0,1,2,3,4,5
+         let sortedArr1= arr1.sort((a,b)=>a-b);//) [ -100,-10,10,20,250,500,1000]
+         let sortedArr= arr1.sort((a,b)=>b-a);//) [1000, 500, 250, 20, 10, -7, -10, -100]
+          console.log(sortedArr);
+          // working
+      //             10,20,-10,-100,250,500,1000
+                  // 10,-10,-100,20,250,500,1000
+                  // -10,-100,10,20,250,500,1000
+                 // -100,-10,10,20,250,500,1000
+
+               ////////////////////////
+               // EVERY (ALL VALUES TRUE)
+               let arr=[10,20,250,500,1000];
+              let arr1=arr.some((val)=>val>250);//true
+              let arr2=arr.every((val)=>val>=10);//false
+              let arr3=arr.every((val)=>val>=10);//true
+      console.log(arr2);
+
+      ////////////////////////////////////////////////////////
+             /// FIND METHOD
+             // condition match aagura 1st value oda return aagiduvan;
+
+                  let arr=[10,1,3,7,15,50,100,90,50,34,67,89,100,23,54,32,]
+                let arr1=  arr.filter((val)=>val>=35);
+                  console.log(arr1);// [100, 90, 50, 67, 89, 100, 54]
+
+                  let arr2=  arr.find((val)=>val>=35);
+                  console.log(arr2); // 50
+
+            //////////////////////////////
+            // FIND INDEX
+             // condition match aagura 1st value oda iNDEX return Pannuvan;
+            //
+                  let arr3=arr.findIndex(val=>val>=35);
+                  console.log(arr3); //5
+
+          ////////////////////////////////
+
+          // REDUCE METHOD (SUM)
+          let array=[10,1,3,7,15,50,90,50,34,67,89,100,23,54,32];
+          let total=array.reduce((a,b)=>a+b,0);
+          console.log(total);// 625
+          console.log(total/array.length);// AVG 41.66
+         
+      let arr = [-10, 2000, 100, 200, 300, 400, 500, 600, 700, 800];
+      let high = arr.sort((a, b) => b - a) / 10;
+      console.log("highest value :" + high[0]);
+      console.log("lowest value :" + high[high.length - 1]);
+
+      let avg;
+      let sum = 0;
+
+      for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+        console.log(sum);
+      }
+      avg = sum / arr.length;
+      console.log(avg);
+        */
+       let a=[1,2,3,4]
+       let c=[5,3,2,1]
+       let d=c.some((e)=>{ 
+        return e>4
+      })
+       
+       
+       console.log(d);
+   
+
+
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
+</html>

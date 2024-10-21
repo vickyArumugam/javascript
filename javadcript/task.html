@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interviwe Questions</title>
+
+    <script>
+      // 1. chunk------------------------------------------------------------------------------
+
+      // given Arr=[a,b,c,d,e,f];
+      // given key=2;
+      // output=[[a,b],[c,d],[e,f]]
+
+      // let givenArr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+      // let givenKey = 2;
+
+      // function chunk(givenArr, givenKey) {
+      //   let tempArr = [];
+      //   let outputArr = [];
+      //   let emptyValue = [];
+      //   if (givenArr.length >= givenKey && givenKey != 0) {
+      //     for (let i = 0; i < givenArr.length; i++) {
+      //       tempArr.push(givenArr[i]);
+      //       if (tempArr.length == givenKey) {
+      //         outputArr.push(tempArr);
+      //         tempArr = [];
+      //       }
+      //       emptyValue = outputArr.length * givenKey - givenArr.length;
+      //     }
+      //     if (givenArr.length != outputArr.length * givenKey) {
+      //       outputArr.push(givenArr.slice([emptyValue]));
+      //     }
+      //     console.log(outputArr, givenArr.length, givenKey);
+      //   } else {
+      //     console.log(givenKey > 0 ? "givenkey is high" : "given key is low");
+      //   }
+      // }
+      // chunk(givenArr, givenKey);
+
+      // 2.compact------------------------------------------------------------------------------
+
+      //     givenArr=[0,1,false,2,'',3];
+      //     removed false value and new array
+      //     output==> truthyValue= [1,2,3] ,falseValue= [0,false,'']
+      // let givenArr = [0, 1, false, 2, "", 3, [], {}, NaN, undefined];
+      // let trueValue = [];
+      // let falseValue = [];
+
+      // for (let i = 0; i < givenArr.length; i++) {
+      //   if (givenArr[i]) {
+      //     trueValue.push(givenArr[i]);
+      //   } else {
+      //     falseValue.push(givenArr[i]);
+      //   }
+      // }
+      // console.log(trueValue);
+      // console.log(falseValue);
+
+      // 3.difference-------------------------------------------------------------------------------
+
+      // givenArr1=[10,5,4,5,3,2];
+      // givenArr2=[10,5,3]
+
+      // let givenArr1 = [10, 5, 4, 5, 3, 2, 9, 1, 0];
+      // let givenArr2 = [10, 5, 3, 6, 7, 8];
+      // let output = givenArr1.filter((X) => !givenArr2.includes(X));
+      // let value = givenArr2.filter((X) => !givenArr1.includes(X));
+      // output.push(value);
+
+      // let newvalue = output.flat();
+
+      // console.log(newvalue);
+
+      // 4.drop--------------------------------------------------------------------------------------
+
+      // givenArr=[1,2,3]
+      // givenkey=2;
+      // output=[3]
+      // let givenArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+      // let givenkey = 2;
+      // let outPut = givenArr.slice(givenkey, givenkey + 1);
+      // console.log(outPut);
+
+      // 5.findIndex--------------------------------------------------------------------------------
+
+      // givenArr=['a','b','c','d']
+      // givenkey="c"
+      // output=2;
+
+      // let givenArr = ["a", "b", "c", "d"];
+      // let givenkey = "c";
+      // let outPut = givenArr.indexOf(givenkey);
+      // console.log(outPut);
+
+      // 6.join---------------------------------------------------------------------------------------
+
+      // givenArr=['a','b','c','d']
+      // givenkey=*;
+      // output=(a*b*c*d);
+
+      // let givenArr = ["a", "b", "c", "d"];
+      // let givenkey = "*";
+      // let outPut = givenArr.join("givenkey");
+      // console.log(outPut);
+
+      // 7.remove--------------------------------------------------------------------------------------
+
+      // givenArr = ["a", "b", "c", "d"];
+      // givenkey = 2;
+      // outPut=["a","b","d"]
+
+      // let givenArr = ["a", "b", "c", "d"];
+      // let givenkey = 2;
+      // let outPut = givenArr.slice(givenkey, givenkey + 1);
+      // console.log(outPut);
+
+      // 8.union-----------------------------------------------------------------------------------------
+
+      let arr = [2, 3, 4, 5, 6];
+      let arr1 = [1, 2, 3, 4];
+      let result = arr1;
+      function union(arr, arr1) {
+        for (let i = 0; i < arr.length; i++) {
+          if (!arr1.includes(arr[i])) {
+            arr1.push(arr[i]);
+          }
+        }
+        console.log(arr1);
+      }
+
+      union(arr, arr1);
+      // let difference = arr1.filter((ele) => !arr.includes(ele));
+      // console.log(...difference, ...arr);
+
+      // 9.every-----------------------------------------------------------------------------------------
+
+      // let givenArr=[true,1,null,"yes"];
+      // givenKey='boolean';
+      // outPut=false;
+
+      // for (let i = 0; i < givenArr.length; i++) {
+      //   if (givenArr[i]) {
+      //     trueValue.push(givenArr[i]);
+      //   } else {
+      //     falseValue.push(givenArr[i]);
+      //   }
+      // }
+      // console.log(trueValue);
+      // console.log(falseValue);
+
+      // 10.filter----------------------------------------------------------------------------------------
+
+      // var givenUsers = [
+      //   { user: "barney", age: 36, active: ture },
+      //   { user: "fred", age: 40, active: false },
+      // ];
+      // var outPut = "barney";
+      // let givenUsers = [
+      //    { user: "barney", age: 36, active: ture },
+      //    { user: "fred", age: 40, active: false },
+      // ];
+      // var givenKey = (user, { age: 36, active: true });
+
+      // let output=givenArr.filter((val)=>val==val.givenKey)
+
+      // console.log(output);
+
+      // 11.size------------------------------------------------------------------------------------------
+
+      // let givenArr = [1, 2, 3];
+      // console.log(givenArr.length);
+
+      // 12.ceil------------------------------------------------------------------------------------------
+
+      // let givenNumbur = 6.004;
+      // let round = Math.ceil(givenNumbur);
+      // console.log(round);
+
+      // 13.max----------------------------------------------------------------------------------------
+
+      // let givenArr = [4, 2, 8, 6];
+      // let maxValue = Math.max(...givenArr);
+      // console.log(maxValue);
+
+      // 14.mean---------------------------------------------------------------------------------------
+
+      // let givenArr = [4, 2, 8, 6];
+      // let mean = 0;
+      // for (let i = 0; i < givenArr.length; i++) {
+      //   mean = mean + givenArr[i] / givenArr.length;
+      // }
+      // console.log(mean);
+
+      // 15.omit--------------------------------------------------------------------------------
+      // let givenArr2 = [1, 8, 9, 30, 20, 10];
+      // let givenArr1 = [1, 10];
+      // let output = givenArr1.filter((X) => !givenArr2.includes(X));
+
+      // let value = givenArr2.filter((X) => !givenArr1.includes(X));
+      // output.push(value);
+
+      // let newvalue = output.flat();
+
+      // console.log(newvalue);
+    </script>
+  </head>
+  <body></body>
+</html>

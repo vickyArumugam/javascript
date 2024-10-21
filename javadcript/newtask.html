@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>new task</title>
+  </head>
+  <body></body>
+  <script>
+    //  1.object la oru value add pannu
+
+    let arr = [
+      { name: "vicky", age: 22 },
+      { name: "uraj", age: 28 },
+      { name: "sri", age: 42 },
+      { name: "siva", age: 50 },
+    ];
+
+    arr.filter((item) =>
+      item.name == "siva" ? (item.gender = "male") : "notvalue"
+    );
+    console.log(arr);
+
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i].name == "siva") {
+    //     arr[i].gender = "male";
+    //   }
+    // }
+    // // // arr[1].city = "kalambur";
+
+    //  2.two arguments value check,and compare
+    // let a = 1;
+    // let b = 100 - 1;
+    // if (a == b || b == 100 || a + b == 100) {
+    //   console.log("true");
+    // }
+
+    // 3 file name  extact
+
+    // let fileName = "index.html";
+
+    // let value = fileName.slice(fileName.lastIndexOf("."));
+
+    // console.log(value);
+
+    //  4.find srting value & concat
+
+    // let wish = " happy new year ";
+
+    // let value = wish.lastIndexOf("year") === -1 ? wish + "year" : wish;
+    // console.log(value);
+
+    // 5. length 3 vida kammiya irunthuchina frist and last value yaduthu
+    //  kodukkanu
+    // let arrow = (str) => {
+    //   return str.length < 3 ? str : str.slice(0, 3) + str.slice(-3);
+    // };
+    // // arrow("abcd");
+    // console.log(arrow("123455677"));
+
+    // 6. name frist latter cut
+    // let str1 = "yuraj";
+    // let str2 = "vicky";
+    // let value = str1.slice(1) + str2.slice(1);
+    // console.log(value);
+
+    // 7.name la half cutting
+    // let str1 = "yuvraj";
+    // let value = str1.length / 2;
+    // let output = str1.slice(0, value);
+    // console.log(output);
+
+    // 8. value adding methods
+
+    // let a = 99;
+    // let b = 100;
+    // let value = a - b > b - a ? a + "ok" : b + "not";
+    // console.log(value);
+
+    // 9 oru arrya la  divistin  number irukkanu pakkura
+    // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    // let value = [];
+    // let falseValue = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //   if (arr[i] % 3 === 0) {
+    //     value.push(arr[i]);
+    //   } else {
+    //     falseValue.push(arr[i]);
+    //   }
+    // }
+    // console.log(falseValue.length);
+
+    // let value = arr.filter((val) => val % 3 === 0).length;
+    // console.log(value);
+
+    // 10 oru number koduthu avana divistion pannanura
+
+    // let number = 50;
+    // let value = [];
+
+    // for (let i = 1; i <= number; i += 1) {
+    //   if (i % 2 === 0) {
+    //     value.push(i);
+    //   }
+    // }
+    // console.log(value);
+  </script>
+</html>

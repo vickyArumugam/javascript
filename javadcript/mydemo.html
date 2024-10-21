@@ -1,0 +1,836 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo</title>
+    <script>
+      /*
+                         true value--------------------
+
+                          string -  "  ","value"
+                          number -  -3,-2,-1,1,2,3
+                          boolean-  true
+                          array  -  []-irunthale true value
+                          object -  {key:value,key:value}
+
+                          false value----------------------
+
+                          string -  "",ematy
+                          number -  0
+                          boolean-  false
+                          NaN    - not a number
+                          undefined
+                          null
+
+                          typeof---------------------------
+                                   typeof
+                          "value"  - string
+                          5666     - number
+                          "val"+34 - srting
+                          true     - boolean
+                          3>7      - true
+
+                           opertors***************************************************
+
+                        1.aritmetic opertors-------------
+
+                          let num1=10;
+                          let num2=5;
+
+                           num1+num2=15----add
+                           num1-num2=5----sub-add
+                           num1*num2=50----mulitcation
+                           num1/num2=2----devistion
+                           num1%num2=0 ----modulus
+
+                        2.assinment opertor (=)-------------------------
+
+                          index start --- 0 zero
+                          length start --- 1 one
+
+                           let FristName="vicky"
+                           let lastName="vignesh"
+                           let fullName=fristName+" "+lastName
+                           console.log(fullName); ------>vicky vignesh
+                           fullName="vignesh Kumar"
+                           console.log(fullName); ------>vignesh Kumar
+                           let arr=[fristName,lastName,fullName]
+                           arr[2]="varan"
+                           console.log(fullName)-----> varan
+
+                        3.equlity(==)----------------------------------------
+
+                          * ivan type check panna mattan 
+                          * value check pannuvan
+                          * anal ore type la irukkura value check pannuvaam
+                         ex:
+                            3=="3"-----------true
+                            3.0=="3"---------true
+                            3.1=="3"---------false
+                            3.1==3-----------false
+                           '3.0'=='3'--------false
+                           "html" == "Html"--false
+                           "Html" == "Html"--true
+                            true=='true'-----false     boolean !=string
+                            false=='false'---false     boolean !=string
+
+
+                        4.scrict check or scrict equlity check (===)
+
+                             * iven type and value check pannuva
+
+                         ex:
+                            3==="3"-----false
+                            3.0==="3"----false
+                            3.0=== 3.0--true
+
+
+                            greater > , less <  ,  >=  ,  <=  ,!, !=,!==, && , || ,
+                            a--, --a, a++,++a
+
+                            a=5
+                            b=10
+
+                            greater (>)--------------------------------------
+
+                            (a>b)
+
+                            * frist  b value pakkanum
+                            * second greaterthen(>) or lassthen(<) pakkanum
+                            * therd  a value pakkanum
+
+                            10>20-----false
+                            20>10------true
+                            a>b--------false
+                            b>a--------true
+
+                            lassthen(<)---------------------------------
+
+                            10<20 -------true
+                            20<10--------false
+                            a<b----------ture
+                            b<a---------false
+
+                            greater or equal (>=)------------------------
+
+                            10>10---------false
+                            10>=10--------true
+                            10>=11--------false
+                            10>=9---------true
+
+
+                            lassthen or equal (<=)-----------------------------
+
+                            10<10---------false
+                            10<=10--------true
+                            10<=11--------true
+                            10<=9---------false
+
+                            not(!)-------------------------------------
+
+                            true -------true
+                            !true ------false
+                            false-------false
+                            !false-------true
+                            10>20-------false
+                            !(10>20)----true
+
+                             5 == 5 //true
+                             5 != 5 //false
+                             '5.1'!== 5 //true
+                             ''==undefined //false
+                             ''!==undefined //true
+
+
+                            AND (&&)--------------------------------------
+
+                            *(2 or 3 and etc,... ) values yallame true irukanum appothan condiction (true)
+                            * value onnu false irunthalum value (false)
+
+                            true && true-------true
+                            true && false------false
+                            false && true -----false
+                            false && false-----false
+
+                            OR (||)------------------------------------------
+
+                            *(1,2 values or ect,...) value ellame false iruntha thaan value (false)
+                            * oru value true irunthalum value (true) thaan
+
+
+                            true || true--------true
+                            true || false-------true
+                            false || true-------true
+                            false || false------false
+
+
+                        ternary operators-----------------------------------------
+
+                           if person's age is more then 18,
+                           if are 'adult'category,otherwise,
+                           they are a 'child'category
+
+                           let age = 14;
+
+                           let type = age > 18 ? "adult ticket" : "child ticket";
+                           console.log(type); child ticket
+
+
+                        increment(++)-------------------------------------------------
+
+                        a=10
+                        b=5
+                        a++-----10 ---> value assinment azhirukkum but next line than work agum
+                        a++------11
+                        ++a------12---> value assiment azhi odane value koduppa
+
+                       decrement(--)----------------------------------------------------------
+                        b-- ---- 5 ---> value assinment azhirukkum but next line than work agum
+                        b-- -----4
+                        --b ---- 3 ----> value assiment azhi odane value koduppan
+
+
+
+                        string methods*******************************************************
+
+                        let para="hello how are you, good morning friends!"
+
+                        1.length-----------------------------------------
+
+                        * length yappavume 1 irunthu than vella seivan
+                        index start --- 0 zero
+                        length start --- 1 one
+
+                          console.log(para.length)---40
+                          console.log(para.length-1)---39
+
+                        2.charAt -----------------------------------------------------------
+
+                        * charAt(10) kulla index value kodutha
+                          aven return charAt kodupan
+
+                          ex:
+                             para.charAt()-----> h
+                             default ve aven 0 index yeduthupaan
+                             para.charAt(12)---> e
+                             index vachi value yeduthu varuvan return pannu
+                             para.charAt(5)----> ""
+                             empty space inga value irukku
+
+                        3.indexOf()-------------------------------------------------------------
+
+                             *iven charat kodutha frist irunthu check pannuvan return index koduppan
+                             *iven kulla kodukkum pothu string irukka vendum
+                             *iven length vida oru value kammiya koduppan
+                             * iven wrong value kodutha  -1 koduppan
+
+                          ex:
+                              para.indexOf()---------- -1
+                              para.indexOf("a")--------10
+                              para.indexOf("!")--------39
+                              para.indexOf("e",30)-----35
+                              para.indexOf("Z")------- -1
+
+                        4.lastIndexOf()---------------------------------------------------------------
+
+                             *iven charat kodutha last la irunthu check pannuvan return index koduppan
+                             *iven kulla kodukkum pothu string irukka vendum
+                             *iven length vida oru value kammiya koduppan
+                             * iven wrong value kodutha  -1 koduppan
+                             * ivan last irunthu chack pannuvan but frist irunthu value koduppan
+
+
+                         ex:
+
+                            para.lastIndexOf("o")--------- 25
+                            para.lastIndexOf("o",17)--------- 15
+
+
+                       5.uppercase and lowercase----------------------------------------------
+
+
+                             *lowercase- ivan small letter iruntha captal letter mathuvan
+
+                             *uppercase- ivan captal letter la iruntha small letter mathuvan
+                         ex:
+
+                           para.toUpperCase()----HELLO HOW ARE YOU, GOOD MORNING FRIENDS!
+
+                           para.toLowerCase()----hello how are you, good morning friends!
+
+
+                       6.trim----------------------------------------------------------------------------
+
+                           *ivan munnadi and pennadi irukkura empty space laa romoven panni du van
+
+                         ex:
+                             let userName="    vignesh    "
+
+                             userName.trim()---------"vignesh"
+
+                       7.string laa booleans-----------------------------------------------------------------
+
+                                * ivan return value boolean koduppan
+
+                             1) INCLUDES
+                             2) STARTSWITH
+                             3) ENDSWITH
+
+                             includes-----------------------------------------------------------------------
+
+                               let para = "hello how are you, good morning friends!";
+
+                               para.inclues("are")-------true
+                               para.inclues("are",11)-------false
+                               para.inclues("Are")-------false
+                               para.inclues("!")-------true
+
+                             startwith()---------------------------------------------------------------------
+
+                                   *yanga irunthu start pannanu sollanum
+
+                               let para = "hello how are you, good morning friends!";
+
+                               para.startWith("h")--------true
+                               para.srartWith("hello")----true
+                               para.srartWith("hello",10)-false
+                               para.startWith()-----------false
+
+                             endsWith()-----------------------------------------------------------------------
+
+                                 *yanga mudithunu sollanum
+
+                               let para = "hello how are you, good morning friends!";
+
+                               para.endsWith()-----------false
+                               para.endsWith(!)----------true
+                               para.endsWith(",",18)-----true
+                               para.endsWith("o",16)-----true
+
+
+                       8.repeat----------------------------------------------------------------------------------
+
+                                let para = "hello how are you?"
+
+                                para.repeat(16)--------->hello how are you, good morning friends!
+                                                         hello how are you, good morning friends!hello how are you,
+                                                         good morning friends!hello how are you, good morning friends
+                                                         !hello how are you, good morning friends!hello how are you,
+                                                         good morning friends!hello how are you, good morning friends!hello
+                                                         how are you, good morning friends!hello how are you, good morning
+                                                         friends!hello how are you, good morning friends!hello how are you,
+                                                         good morning friends!hello how are you, good morning friends!hello
+                                                         how are you, good morning friends!hello how are you, good morning
+                                                          friends!hello how are you, good morning friends!hello how are you,
+                                                          good morning friends!
+
+
+                       9.replace---------------------------------------------------------------------------------------------
+
+                               let para = "hello how are you, gOOd morning friends!";
+
+                               para.replace("o","*")------------hell* how are you, gOOd morning friends!
+                               para.repalce(/o/,"*")------------hell* how are you, gOOd morning friends!
+                               para.replace(/o/g,"*")-----------hell* h*w are y*u, gOOd m*rning friends!
+                               para.replace(/o/g,"*")-----------hell* h*w are y*u, gOOd m*rning friends!
+                               para.replace(/o/gi,"*")----------hell* h*w are y*u, g**d m*rning friends!
+
+
+                       10.slice------------------------------------------------------------------------------------------------
+
+                                 * yanga irunthu cut  panna poriyo antha indexoda value and
+                                  cut panni mudikka poraa indexku oru value add panni kodukanum
+
+
+                               let para = "hello how are you";
+
+                               para.slice(0)----------------hello how are you
+                               para.slice(0,5)--------------hello
+                               para.slice(5,9)--------------how
+                               para.slice(para.length-1,)---u
+
+
+                       11.padstart--------------------------------------------------------------
+
+                               let para = "hello how are you";
+
+                               para.padStart(40,"*")---***********************hello how are you
+
+                       12.padEnd------------------------------------------------------------------
+
+                               let para = "hello how are you";
+
+                               para.padEnd(40,"*")---hello how are you***********************
+
+
+                        Array methods************************************************************
+
+                       1.concat-----------------------------------------------------------------
+
+                               * yantha array va join pannanumo avana antha array.concat(sekkavendiya array)
+                               * ivan rendu array value onna sethu new array va koduppan
+
+                           ex:
+
+                             let array1=[0,1,2,3,4,5]
+                             let array2=[6,7,8,9]
+                             let array3=["vicky",'mani','murugan']
+                            let newArray= array1.conCat(array2)------- [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+                            let array4=newArray.concat(array4)--------[0, 1, 2, 3, 4, 5, 6, 7, 8, 9,"vicky",'mani','murugan']
+
+
+                       2.push()--------------------------------------------------------------------
+
+                              * ivan yantha array la value sekkavenumo avan .push(value)
+                              * ivanu new array va return pannuva
+
+                           ex:
+
+                             let array1=[0,1,2,3,4,5]
+
+                             let push=array1.push(10)------[0,1,2,3,4,5,10]
+                             let userName="vicky";
+                             push.push(userName)----------[0,1,2,3,4,5,10,"vicky"]
+
+                       3.pop()-----------------------------------------------------------------------
+
+                            *ivan oru array la irukkura kadasi value va romove pannu
+                            return antha value kudukkum
+
+
+                             let array1=[0,1,2,3,4,5]
+                             let newarray1=array1.push()------------[0,1,2,3,4]
+                             console.log(newarray1)------------------[5]
+
+                       4.unshift--------------------------------------------------------------------
+
+                           *ivan oru value arrayla front la join panni return new array va koduppan
+
+
+                           let array1=[0,1,2,3,4,5]
+                            array1.unShift(-3)-------------[-1,0,1,2,3,4,5]
+
+                       5.shift--------------------------------------------------------------------------
+
+                           * ivan oru array la irukku frist value remove pannanuva
+                           * ivan return romove panna value koduppan
+
+                         ex:
+
+                           let array1=[0,1,2,3,4,5]
+
+                           array1.shift()----------[1,2,3,4,5,]
+
+                       6.reverse ----------------------------------------------------------------------------
+
+                         * ivan oru array la irukkura value appadiye reverse pannu kodupan return arrayva koduppan
+
+                           let array1=[0,1,2,3,4,5]
+                           let arr2 = ["a", "b", "c", "d", "e", "f", "g"];
+
+
+                           array1.reverse()------------[5, 4, 3, 2, 1, 0]
+                           arr2.reverse()--------------['g', 'f', 'e', 'd', 'c', 'b', 'a']
+
+
+
+
+
+
+
+
+
+                       7.split-----------------------------------------------------------------------
+
+                            * string ga arraya matha use aguthu
+                            * yathavachi split pannanu sollanum
+
+                         let userName="vignesh"
+
+                         userName.split()-------["vignesh"]
+                         userName.split("")-------['v', 'i', 'g', 'n', 'e', 's', 'h']
+                         userName.split(n)-------- ['vig', 'esh']
+
+
+                       8.join------------------------------------------------------------------------
+
+                          * array va string matha use aguthu
+                          * default camma vachi koduppan
+
+                           let userName=["vicky","mani","kannan","suresh","ajith"]
+
+                             userName.joni()------------vickymanikannansureshajith
+                             userName.join("")-----------vicky,mani,kannan,suresh,ajith
+                             userName.join("*")----------vicky*mani*kannan*suresh*ajith
+                              userName.join("-S")--------vicky-Smani-Skannan-Ssuresh-Sajith
+
+
+                       9.slice--------------------------------------------------------*
+
+                         * slice method use panni array values ah cut panna thevai paduthu
+                         * ivan return cut panna value vaa new array va koduppan
+                         * ivanukku yanga cut panna porom & yethu vairaikkum cut panna porom sollanum
+                         *  totaly two argument
+
+                         let arr = ["thiru", "Ajith", "arun", "bala", "charan", "abc"];
+
+                         arr.slice(1,4)----------["ajith","arun","bala"]
+                         arr.slicee(2,3)---------["arun"]
+
+                       10.splice-------------------------------------------------------*
+
+                       *slice ooda anna thaan splice
+                       *3arguments um kattayum podanum nu avasiyum illa but kodukalam
+                       *splice(starting(index)la sollanum, delete count(0 or 1,2,3..),new value type string "name")
+
+                         let arr = ["thiru", "Ajith", "arun", "bala", "charan", "abc"];
+
+
+
+
+
+
+
+                       11.flat  ------------------------------------------------
+
+                       * array kulla irukkura nexted array vaa oru array vaa convert panni new array vaa koduppan
+                       * yathanai array irukku pathu kodokkanum
+
+
+                         let a = [1, 2, [3, 4], [5, 6, [7, 8, [9, 10]]]];
+
+
+                         console.log(a.flat(3))----------------[1,2,3,4,5,6,7,8,9,10]
+                         console.log(a.flat(2))----------------[1,2,3,4,5,6,7,8,[9,10]]
+
+
+
+                       12.map method-----------------------------------------------
+
+                       * alredy oru arrayalaa irukkura total value yachachum changes or add something any worku map
+                         methods use pannuvom
+                       * inga arrow funstion use panni aga vendum
+                       * kodukkura parameter vachi arugment vangi use pannavendum
+                       * syntex nalla read panna venum
+                       *  iven condestion poruthu return array vaium and booleans you kodppan
+
+
+                        let salary = [100, 200, 300, 400, 500];
+
+                        let bonusSalary = salary.map((value) => value * 3);---------[300, 600, 900, 1200, 1500]
+                        let bonusSalary = salary.map((value) => value > 1000);------[false, false, false, false, false]
+                        let bonusSalary = salary.map((value) => value < 1000);------[true, true, true, true, true]
+                       let bonusSalary = salary.map((val) => val >= 200);-----------[false, true, true, true, true]
+
+
+                       13.filter method---------------------------------------------------
+
+                       * ivan oru array la irukkura values filter panna use aguran
+                       * iven return new array vaa koduppan
+
+
+
+                        let salary = [100, 200, 300, 400, 500];
+
+                        let trainers=salary.filter((value)=> {})
+
+                        console.log(value);----------[100,200,300,400,500];
+                        let trainers=salary.filter((value)=>value <300)---[100,200]
+                        let works=salary.filter((value)=>value >=300)---[300,400,500]
+
+
+
+                         let all  = [13, 19, 3, 7, 15, 20, 3, 21, 28, 46, 90];
+                                   let elligble  = total.filter((value) => {
+                                     return value >= 18 && value <= 60;
+                                   })
+
+                                   console.log(ellible);----[19,20,21,28,46]
+
+
+
+                       14. foreach()--------------------------------------------------------
+
+                               * foreach ivana for loop pathila use pannurom
+                               * oru arraya irukkura value va loop panni print panna use aguthu
+                               *
+
+
+                             let arr = ["thiru", "Ajith", "arun", "bala", "charan", "Abc"];
+
+                              arr.forEach((value,i)=>{
+                               console.log(i+1,value)
+                              })------------------------------1."thiru"
+                                                              2."ajith"
+                                                              3."arun"
+                                                              4."bala"
+                                                              5."charan"
+                                                              6."Abc"
+
+                             arr.forEach((value,i)=>{
+                               console.log(i+1,value,"vicky")
+                              })------------------------------1."thiru" "vicky"
+                                                              2."ajith" "vicky"
+                                                              3."arun"  "vicky"
+                                                              4."bala"  "vicky"
+                                                              5."charan" "vicky"
+                                                              6."Abc"     "vicky"
+
+                         15.sort methods-----------------------------------------------------------------
+
+                         * 1st preperance Capital[A-Z]
+
+                         * numbers eruvarusai marum irangu varusai vanuna frist and second value compare
+                         panni pakka vendum
+
+                         * (-) kodutha eruvarusailum (+) kodutha
+
+                             let arr = ["thiru", "Ajith", "arun", "bala", "charan", "Abc","Aabc"];
+
+                             arr.sort()-------['Aabc', 'Abc', 'Ajith', 'arun', 'bala', 'charan', 'thiru']
+
+                             let arr1=[10,20,500,-10,-100,250,1000,-7]
+
+
+                             let sorted =arr1.sort((a,b)=>a+b)---[10, 20, 500, -7, -100, -10, 250, 1000]
+
+                             let sorted =arr1.sort((a,b)=>a-b)---[-100, -10, -7, 10, 20, 250, 500, 1000]
+
+
+                         16.every------------------------
+
+                              * ivan oru array laa irukkura yalla value pass anaa matdum thaan truee sollu
+                              * oru value fail anna kuda false return pannuvan
+                              * ivan return boolean than tharuvan
+
+
+                               let arr=[10,20,250,500,1000];
+
+                               arr.every(value)=>value>1001-------false
+                               arr.every(value)=>value>1000-------true
+
+                          17.some ------------------------------------
+
+                               * iavan array irukkura yallam value pass avaga vendiyathu avachium illa oru
+                               value pass anaakuda return true thaan varuvan
+
+
+                               let arr=[10,20,250,500,1000];
+
+                               arr.some(value)=>value<---9----false
+                               arr.some(value)=>value>11-------true
+
+                          18.
+
+
+
+
+
+
+                  conditional statements****************************************************
+
+
+                      1. if-else conditional statements------------------------------------
+
+                            * if ture value iruntha mattdum return pannuva
+                              if conditional false iruntha else vela seivan
+
+                            * if kulla nexted if kodukkalam athukku peru else if
+                            ithalium condistion kodukkalam
+
+                            * else false value mattdm thaan return pannuvaan
+
+                            * else laa condistion kodukka mudiyathu
+
+                            * snytex mukkium and oru line conditional iruntha
+                              {}-kali bracket use panna avasiyam illa
+
+
+                              snytex-if(condistion){
+                                  console.log(print)
+                              }
+                              else{
+
+                              }
+                         ex:
+
+                       if 0 AM to 10 AM iruntha goodmoring
+                       if else 10 AM to 19 PM  iruntha goodafnoon
+                       else 19 PM to 0  PM iruntha goodnignt
+
+                          let hour = 16;
+                      if (hour <= 10) {
+                        console.log("good morning");
+                      } else if (hour <= 19) {
+                        console.log("goodafternoon");
+                      } else {
+                        console.log("goodnight");
+                      }
+
+                      output----->goodafternoon
+
+                    2.swichCase
+
+                     * swichcase itha use pandrathukku condistion namakku thrium na
+                     use pannalam illa na if else use pannanum
+                     * condiction arrgument koduthu parameteruv vangalaam illa contidctionnu kodukkalam
+
+                     * swichcase snytex mukkium
+                     * ivan case next case break kodukkanum illa na ivan check panni value koduppan
+                     * order wise kodukkanum
+                     * last case apparama default kodukkanum
+
+                            let num=1;
+
+                     snytex-
+                       let num = 5;
+                  switch (num) {
+                    case 1:
+                      console.log("number1");
+                      break;
+
+                    case 2:
+                      console.log("number2")
+                      break;
+
+                     default:
+                      console.log("other numbers");
+                      break;
+                  }
+
+                     let money = 7;
+                  switch (true) {
+                    case money >= 60:
+                      console.log("you buying i phones");
+                      break;
+
+                    case money >= 10:
+                      console.log("you buying android mobile");
+                      break;
+
+                    case money > 5 && money < 10:
+                      console.log("basic mobiles");
+                      break;
+                      default:
+                      console.log("you can't afford mobile phone now!");
+                      break;
+                        }
+                      output------->basic mobiles
+
+                  loops***************************************************
+
+                  1.forloop---------------------------------------
+
+                  * ivana oru array ooda value onnu onna sekpanna use aguthu
+                  * ivan value kuda intex kekaikkum
+                  * return string koduppan naama arrya va convert pannanu
+                  * snytex mukkium-for(let i=o;i<arr.length;i++){
+                        console.log(i)
+                  }
+
+
+
+                  let array = [1, 2, 3, , 7, 0, "", null, undefined, false];
+                  let array1 = [];
+                  let array2 = [];
+
+                  for (let i = 0; i < array.length; i++) {
+                    if (array[i]) {
+                      array1.push(array[i]);
+                    } else {
+                      array2.push(array[i]);
+                    }
+                  }
+                  console.log(array1);---------------------[1,2,3,7]
+
+                  console.log(array2);---------------------["",null,undefined,false]
+
+            math methods********************************
+
+             1.abs------------------------------------------
+
+               * ivan mainas(-) value va plus value va return pannuvaa (+)
+               snytex Math.abs()
+
+               ex:
+                  let num = -19.9
+
+                  let num1=Math.abs(num)----------------19.9
+
+             2.pi-------------------------------------------
+
+             * pi value koduppan ivan value PI=3.141592653589793
+
+                  let pi = Math.PI;
+                  console.log(pi);-----3.141592653589793
+
+             3.floor---------------------------------------------
+
+             * ivan oru value intiger.dicimal irukuraa pothu floor use panna
+             ivan intger value koduppan
+
+              let pi = Math.PI;
+               console.log(Math.floor(pi));-------------- 3
+
+            4.ceil --------------------------------------------------
+
+            * ivan floor oppsite
+            * ivan  oru value intiger.dicimal irukuraa pothu ceil use panna
+             ivan intger+1 value koduppan
+
+
+
+               let pi = Math.PI
+               console.log(Math.ceil(pi));-------- 4
+
+           5.round----------------------------------------------------
+
+           * ivan value od dicimal  vachi return value round panni  koduppan
+
+            let pi = Math.PI;
+            console.log(Math.round(pi));----------- 3
+
+            console.log(Math.round(49.51));------- 50
+
+            console.log(Math.round(49.49));------- 49
+
+
+         6. rendom----------------------------------------------------
+
+         * ivan rendom oru value koduppan 
+         * ivanukku min to max value kodukka mudium 
+         * value reload panna panna value chanage aguvan 
+         
+          let rendom = Math.random() * (30 - 20) + 20;
+          console.log(rendom);------22.309133020271542
+          console.log(rendom);------29.195653319588587
+
+         7. min ------------------------------------------------------
+          
+         * ivan min value matdum yeduthu koduppan 
+
+         console.log(Math.min(10, 20, 15, 49, -7.47465));------ -7.47465
+
+         8.max ------------------------------------------------------
+
+         * ivan max value yedutu koduppan 
+
+         console.log(Math.max(10, 20, 15, 49, -7.47465));------- 49
+         
+
+
+         
+
+
+
+
+
+                          */
+
+      // console.log(Math.max(10, 20, 15, 49, -7.47465));
+    </script>
+  </head>
+  <body></body>
+</html>

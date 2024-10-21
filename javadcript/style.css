@@ -1,0 +1,43 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    width: 80%;
+
+}
+
+.navigation {
+    display: flex;
+    justify-content: end;
+    gap: 100px;
+}
+
+.company-log h3 {
+    color: blue;
+    font-size: 20px;
+}
+
+.nav {
+    padding-top: 16px;
+}
+
+.nav a {
+    color: black;
+    font-size: 22px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.nav button {
+    padding: 10px 20px;
+    margin-left: 20px;
+    font-size: 15px;
+    background-color: blue;
+    color: white;
+    border: 2px #000;
+    border-radius: 5px;
+}
+
+.container {
+    width: 80%;
+}

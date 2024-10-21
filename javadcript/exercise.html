@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1)check two number
+
+      // two number and return true if one of the number is 100(or)
+      // if the sum of the two number is 100
+
+      // method 1)
+      // let isEqualTo100=(a,b)=>a==100||b==100||a+b==100;
+
+      // console.log(isEqualTo100(100,0));
+      // console.log(isEqualTo100(0,100));
+      // console.log(isEqualTo100(59,41));
+
+      // method 2)
+      // function equal(a,b){
+      //     if(a==100||b==100||a+b==100){
+      //         console.log(true);
+      //     }
+      //     else{
+      //         console.log(false);
+      //     }
+      // }
+      // equal(100,0);
+      // equal(0,100);
+      // equal(51,49);
+
+      // 2)file name
+
+      // input=>'index.html'
+      // output=>.html
+
+      // let getFileExtention=(str)=>str.slice(str.lastIndexOf('.'));
+      // console.log(getFileExtention("index.html"));
+
+      // 3)replace every character
+
+      // input=>'abcd'
+      // output=>bcde
+
+      // let moveCharsForward=(str)=>
+      //         str.split('')
+      //         .map(char=> String.fromCharCode(char.charCodeAt(0)+1))
+      //         .join('');
+      //         console.log(moveCharsForward('abc'));
+
+      // 4)formatDate
+
+      // let formatDate=(date=new Date())=>{
+      // let day=date.getDate();
+      // let month =date.getMonth()+1;
+      // let year=date.getFullYear();
+      //     return `${month}-${day}-${year}`;
+      // }
+      //    console.log(formatDate());
+
+      // 5)addNew
+
+      // let addNew=(str)=>str.indexOf('happy')==0 ?str:`happy ${str}`;
+      // console.log(addNew('happy New year'));
+
+      // 6)two string add
+
+      // let makeNewString=(str)=>str.length < 3 ?str: str.slice(0,1)+str.slice(-1);
+      // console.log(makeNewString('ac'));
+      // console.log(makeNewString('acyuyuyuyuyuyuyuqwe'));
+      // console.log(makeNewString('yuvaraj'));
+      // console.log(makeNewString('12345678890'));
+
+      // 7)string first half
+
+      // let firstHalf=(str)=>str.slice(0,str.length/2);
+      // console.log(firstHalf('123344'));
+
+      // let firstHalf1=(arr)=>arr.split(',');
+      // console.log(firstHalf1('a,b,c,d'));
+
+      // 8)concat in two string
+
+      // let concatenate=(str1,str2)=>str1.slice(1)+str2.slice(1);
+
+      // console.log(concatenate('1234','1234'));
+
+      // 9)closestTo100
+
+      // let closestTo100=(a,b)=>(100-a)<(100-b)?a:b;
+      // console.log(closestTo100(15,85));
+      // console.log(closestTo100(10,8));
+      // console.log(closestTo100(50,50));
+
+      // 10)contains2To4
+
+      // let conutChars=(str,char)=>
+      // str.split('').filter(x => x==char).length;
+      // console.log(conutChars('rtyuoooo','o'));
+
+      // let contains2To4=(str,char)=>
+      //     conutChars(str,char)>=2&&conutChars(str,char)<=4;
+
+      //  console.log(contains2To4('ooh!','o'));
+      //  console.log(contains2To4('yoooou','o'));
+      //  console.log(contains2To4('ooohhhh!','h'));
+
+      // 11)evenNumber
+
+      // let countEvenNumber=(arr)=>arr.filter(num=>num%4==0).length;
+      // console.log(countEvenNumber([1,2,3,4,5,6]));
+      // console.log(countEvenNumber([22,32,43,52,56]));
+
+      // 12)evenNumber2
+
+      // let countEvenNumber=(arr)=>arr.filter(num=>num % 2 == 0).length;
+      // let createEvenNumber = (num)=>{
+      //     let returnArray=[];
+      //     for(let i = 1; i <= num; i += 1){
+      //         returnArray.push(i);
+      //     }
+      //     return returnArray;
+      // }
+      // console.log(countEvenNumber(createEvenNumber(10)));
+
+      // 13)isAscending
+
+      // let isAscending=  (arr)=>{
+      //     for(let i=1; i<=arr.length; i++){
+      //         if(arr[i+1] < arr[i]) return false;
+      //     }
+      //     return true;
+      // }
+      // console.log(isAscending([1,2,3,4,5,8,7,9]));
+      // console.log(isAscending([1,3,4,5,2]));
+
+      // 14)largestNumber
+
+      // let largestEven=(arr)=>Math.max(...arr.filter(num=>num%6==0))
+      // console.log(largestEven([1,3,5,88,98,456,3456,4568]));
+
+      // 15)replace
+
+      // let replaceFirstDigit = (str)=>str.replace(/[a-z]/g,'@');
+      // console.log(replaceFirstDigit('abcd1234efghd23'));
+      // console.log(replaceFirstDigit('abcd1w2e3e4efghd2v003'));
+
+      // 16)isleapYear
+
+      // let isleapYear=(year)=>year % 4 === 0;
+      // console.log(isleapYear(2012));
+      // console.log(isleapYear(2018));
+      // console.log(isleapYear(2024));
+    </script>
+  </body>
+</html>

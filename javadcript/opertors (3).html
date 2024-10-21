@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Truthy Values
+
+      //1) Boolean - true
+
+      //2) string->kulla eadhachu value irruntha(true), string(space) " " ,"false","a","123",
+
+      //3) Any Number(- 0r +) -1, 1,,1.1,123, etc..
+
+      //4) emtpy array[], array kulla value irrunthalum illanalum[] true tha..
+
+      //5) emtpy object{}, object kulla value irrunthalum illanalum{} true tha..
+
+      // let name='raj';
+      // let age=22;
+      // let job=true;
+
+      // let obj={name:name,age:age,job:job}
+      // console.log(obj);
+
+      // let arr=[name,age,job,'raj'];
+      // console.log(arr);
+
+      //////////////////////////
+      // False Values
+
+      // 1) false
+      // 2) Empty string ""
+      // 3) 0 or -0
+      // 4) undefined
+      // 5) null
+      // 6) NaN -Not a Number
+
+      ////////////////////////////////
+      //TYPE OF
+      // let y='str'; //string
+      // let y=55;    // Number
+      // let y=['as']; // object
+      // let y={name:'gopi'}; //object
+      // let y='4'+'u'; // 4u -string
+      // let y=10+10;  // 20 number
+      // let y='10'+10;  //1010 string
+      // let y='10'+'10';  //1010 string
+      // let y=6+3+'5';   //95 string
+      // let y='6'+3+'50';   //6350 string
+      // let y=7+'35'+15-20+'0'+5*2;   //73495010 string
+      // console.log(y,typeof y);
+
+      ///////////////////
+
+      // B 0 D M A S RULE
+
+      // console.log(5-7+22*1/1); //20
+      // console.log(15*3-2/2+(4/2+2));//48
+
+      5 + 10 - (10 + 5) * 5 + 2 / 5;
+
+      /////////////////////////////////
+      // array and object
+      // let name='Arun';
+      // let age=25;
+      // let mrg=true;
+
+      //   let arr=[name,age,mrg,'kkk',55];
+
+      //   let obj={username:"kumar",age:22,city:'Kalambur'}
+      //   let obj={username:name,userage:age,married:mrg}
+      //   console.log(obj);
+      //   console.log(arr);
+
+      /////////////////////////////////////////
+      ////////////////////////////
+
+      //OPERATORS
+
+      //1) Assignment(=)
+      //index start --- 0 zero
+      //length start --- 1 one
+      //let x=5
+      // x=6
+
+      /*
+
+let x=5;
+let myname='uraj';
+let arr=['hallo',x,45,"how","are",'You','','last',];
+let str="Hallo how are you";
+// console.log(str.length);
+// console.log(arr.length);
+// console.log(arr[0],arr[3],arr[arr.length-1]);
+// console.log('hallo '.length);
+// console.log(str[str.length-1]);
+// console.log(str[]);
+// let myName=arr[0];
+// myname='urajjj';
+arr[0]="dineshKumar";
+arr[0]='ajith';
+arr[arr.length-1]='jjlds'
+// console.log(arr);
+
+str='h';
+// console.log(str);
+*/
+
+      ///////////////////////////////
+
+      //2) equality(==)a=3,b=3 a==b //true
+
+      // let a=3;
+      // let b='3';
+      // a==b // true
+      // 3=='3' // true
+      // '3'=='3.0' // false
+      // '3'==3.0  //true
+      //'3.0'=="3.00"  //false
+      // 3.000000000000=="3.00" // true
+      // "3.000000000000"=="3.00" // false
+      // 'html'=='Html' //false                casesentive
+      // 'Html'=='Html' //true
+      // '3.0'==3 //true
+      // '3.0'=='3' //false
+      // '3'=="3"  //true
+      // true=='true' //false  boolean !=string
+      // false=='false'  //false boolean !=string
+      //Number('4.0000')===4.0) //true
+      //Number('4.0001')==4.001 //false
+      //Number('4.0001')==4.0001 //true
+      /*
+let arr=['good','morning'];
+arr[1]='night';
+// let age=54;
+
+// console.log(arr);
+let obj={user:'ajith',userage:55,city:'chennai'};
+
+// console.log(Object.keys(obj).length);
+//object.key
+console.log(obj.city); //chennai
+console.log(obj.user); //ajith
+console.log(obj.userage); //54
+
+obj.user='kumaran';
+obj.city='kalambur';
+obj.userage=56;
+console.log(obj);
+ /////////////////////////////////
+      // strict check or strict equality check
+
+      // === value and type
+      // '3' == 3  //true
+      // '3'===3   // false //string != number
+      // '3'==='3' // true
+      // let a=3; //number
+      // let b='3'; //string
+      // console.log(typeof a,typeof b);
+*/
+      //  greater > , less <  ,  >=  ,  <=  ,!, !=,!==, && , || ,
+      //  a--, --a, a++,++a
+
+      //conditions
+
+      // 1st b value paarkanum
+      // 2nd greater or lessthan
+      // 3rd a value check pannanum
+
+      //GREATER  (>)
+
+      // 2 > 4 //false
+      // 4 > 2   //true
+      // 11 > '10' // true
+      // '11' > '10' // true
+      // 5.1 > 0   //true
+      // b > a //true   a=5,b=10
+      // a > b //false  a=5,b=10
+      // a > b //false  a=5,b=5
+      // 5.111 > 5.11  //true
+      // 5.131 > 5.12  //true
+      //  5.11111111 > 6  //false
+      //  2+'0'>15     //true
+      // '0'+2+'0'+'0' > 15+10/2 //true  //200>20
+
+      //LESS THAN (<)
+
+      // 5 < 4   // false
+      // 4 < 5   // true
+      // '5.0' < '5' //false
+      // '5.0' < '5' //false
+      // '5.0020' < '5.0001' //false
+      // '5.0020' < '5.2001' // true
+
+      //  578 > 587  // false
+      //  578 < 587  // true
+
+      ////// Greater than or equal (>=)
+
+      // 10-5.9 >= 3+'0.9' //false  // 4.1 >= 30.9
+      // 6 >= 6   //true
+      // 7 >= 6   //true
+      // 6 >= 7  //false
+      // 6 >= '6.0' // true
+      // 6 >= '5.0' // true
+
+      //// lass than or equal (>=)
+
+      // 6 <= '5.0' // false
+      // 6 <= '6.0' // true
+      // 55 <= 44  // false
+      // 10-5.9 >= 3+'0.9' //false
+      // 10-5.9 >= 3+Number('0.9')  // true
+      let a = 6;
+      let b = 5;
+      //++ = +1 oru number increase;
+      //-- = -1 oru number decrease;
+      // console.log(a++); //a = 6+1  value no change
+      // console.log(a);   //a = 7 value changed..
+      // console.log(a++); //a = 7 value no change
+      // console.log(a);   //a = 8 value changed..
+
+      // console.log(++b); //b = 6 value no change
+      // console.log(b);   //b = 6 value changed..
+      // console.log(b++); //b = 6 value no change
+      // console.log(b);   //b = 7 value changed..
+
+      // console.log(a--); //a = 6-1  value no change
+      // console.log(a);   //a = 5 value changed..
+      // console.log(--b);   // b = 4
+      // console.log(b);       // b = 4
+      //a=6
+      a++;
+      //a=7
+      a++;
+      //a=8
+      a--;
+      //a=7
+      --a;
+      //a=6
+      // console.log(a); // a=6;
+
+      // b=5,a=6
+
+      // --b,
+      // //b=4
+      // b++,
+      // //b=5
+      // ++b,
+      // //b=6
+      // --a;
+      // //a=5
+      // a=b;
+      // //a=6
+      // let c=b+a;
+      // // c=6+6
+      // console.log(c);  //12
+
+      --b,
+        //b=4
+        b++,
+        //b=5
+        ++b,
+        //b=6
+        --a;
+      //a=5
+      b = b + a; //11
+      //b=11
+      let c = b + a;
+      // c=11+5
+      // console.log(c);  //16
+
+      let x = 5;
+      let y = 6;
+
+      ////////////////////////////////
+      /////////////////////////////////
+      ///// AND (&&)
+
+      // ellamey(2 or 3,etc) true na condition true
+      // onnu false irrunthal condition false
+
+      // true && true = true
+      // true && false = false
+      // false && true = false
+      // false && false = false
+
+      // 5 > 6 // false
+      // 6 < 5 // false
+      // 6 >= 6 && 6 < 5  //false
+      // 6 >= 6 && 5 <= 5 //true
+      // '6.0' == 6 && 5 < 5 //false
+
+      /////////////////////////////
+      ///// OR (||)
+
+      // eadthachu onnu true na condition true
+      // ellamey false irrunthal condition false
+
+      // true || true = true
+      // true || false = true
+      // false || true = true
+      // false || false = false
+
+      //   let username = "vignesh Kumar";
+      //   let password = "admin";
+      //   // console.log(username =='vignesh Kumar');
+      //   if (username == "vignesh Kumar" || password == "admins") {
+      //     // console.log(a);
+      //     // alert("this name is true")
+      //     console.log("Successfully Login");
+      //   } else {
+      //     console.log("Invalid data");
+      //   }
+      ///////////////////////////
+      // NOT !  Opposite
+
+      // false = false
+      // !false = true
+      // true = true
+      // !true = false
+
+      let q = true;
+      let w = false;
+      // console.log(q); //true
+      // console.log(!q); // false
+
+      // console.log(w); //false
+      // console.log(!w); // true
+      // 5 == 5 //true
+      // 5 != 5 //false
+      // '5.1'!==5 //true
+      // ''==undefined //false
+      // ''!==undefined //true
+
+      //
+      // ternary operators
+      //  if person's age is more then 18,
+      // if are 'adult'category,otherwise,
+      // they are a 'child'category
+      // let age = 14;
+
+      // let type = age > 18 ? "adult ticket" : "child ticket";
+      // console.log(type);
+
+      if (!false) {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+      let value = false;
+      // value = !value;
+      // console.log(value);
+
+      let u = 5;
+      let v = 6;
+
+      if ((v == 6 || !value) && u == 5) {
+        console.log("fhasfa");
+      }
+      console.log(u);
+      // let y="3";
+      // let x='3';
+      // console.log(x==y);
+
+      function doLogin() {
+        let user = document.getElementById("username").value;
+
+        let password = document.getElementById("password").value;
+        if (
+          (user == "yuva" && password == "password") ||
+          (user == "vicky" && password == "password")
+        ) {
+          alert("this value corret");
+        } else {
+          alert("this value invaild");
+        }
+      }
+      function doClear() {
+        let user = document.getElementById("username");
+        user.value = "";
+        let password = document.getElementById("password");
+        password.value = "";
+      }
+      // password> admin ,password
+    </script>
+    <style>
+      .form label {
+        display: block;
+      }
+      #username,
+      #password {
+        display: block;
+        margin-bottom: 15px;
+      }
+      div button {
+        padding: 4px 25px;
+        margin-bottom: 20px;
+
+        /* color: #fff6; */
+      }
+      .full {
+        color: white;
+        border: 1px solid skyblue;
+        width: 180px;
+        background: url(bg-img.jpg);
+        background-size: 272px 178px;
+        background-repeat: no-repeat;
+
+        padding: 10px 50px;
+        margin: 150px 537px;
+        border-radius: 5px;
+      }
+
+      body {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full">
+      <form class="form" action="#">
+        <label for="#">Username</label>
+        <input type="text" id="username" />
+        <label for="#">Password</label>
+        <input type="text" id="password" />
+      </form>
+      <div>
+        <button class="button-one" onclick="doLogin()">Login</button>
+        <button class="button-two" onclick="doClear()">Clear</button>
+      </div>
+    </div>
+  </body>
+</html>
